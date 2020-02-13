@@ -5,7 +5,6 @@ export default class Layout extends Component {
     static propTypes = {
         header:PropTypes.element,
         aside:PropTypes.element,
-        children:PropTypes.element
     }
     render() {
         return (
