@@ -12,7 +12,7 @@ function App() {
      <RouteGuard onBeforeChange = {
       handleBeforeChange
      }
-     onChange={() => {console.log('ok')}} >
+     onChange={(preLocation,nextLocation,action,unListen) => {console.log('ok')}} >
         <Switch>
             <Route path='/login' exact component={Login}></Route>
             <Route path='/' component={Admin}></Route>

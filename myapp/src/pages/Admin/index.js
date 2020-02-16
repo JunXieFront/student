@@ -5,17 +5,20 @@ import Menu from '../../component/Menu'
 import Welcome from '../../pages/Welcome'
 import StudentList from '../../pages/StudentList'
 import AddStudent from '../../pages/AddStudent'
-import {Route} from 'react-router-dom'
+import TransitionRoute from '../../component/TransitionRoute'
+
 export default class Admin extends Component {
     render() {
         return (
             <Layout header={<Header/>}
                     aside={<Menu />}>
-                <Route path="/" exact component={Welcome}></Route>
-                <Route path='/students' exact component={StudentList}/>
-                <Route path="/students/add" exact component={AddStudent}/>
-                <Route path="/courses"/>
-                <Route path="/courses/add"/>
+                <TransitionRoute path="/" exact component={Welcome}>
+
+                </TransitionRoute>
+                <TransitionRoute path='/students' exact component={StudentList}/>
+                <TransitionRoute path="/students/add" exact component={AddStudent}/>
+                {/* <TransitionRoute path="/courses" exact component={null}/>
+                <TransitionRoute path="/courses/add" exact component={null}/> */}
             </Layout>
         )
     }
